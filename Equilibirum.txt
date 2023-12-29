@@ -1,0 +1,33 @@
+/*                                                         EQUILIBIRUM POINT
+*
+* In an array at a point where left side sum of elements is equal to right side sum of elements
+*
+*
+* */
+
+public class EquilibriumGeek
+{
+    public static void main(String[] args)
+    {
+        int[] a = new int[]{1,3,7,5,2,2,7};
+        int ls=0;
+        int rs=0;
+        int j = a.length-1;
+
+        for(int i=0;i<a.length;i++)
+        {
+            ls += a[i];
+            rs += a[j];
+            j--;
+
+            if(ls == rs)
+            {
+                System.out.println("The Equilibrium point is :"+""+(j+1));
+                break;
+            }
+        }
+
+    }
+
+
+}
